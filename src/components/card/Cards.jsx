@@ -19,12 +19,13 @@ const Cards = ({movie}) => {
         isLoading
         ?
         <div className="cards">
-          <SkeletonTheme color="#202020" highlightColor='#444'>
-            <Skeleton height={300} duration={2} />
-          </SkeletonTheme>
+            <SkeletonTheme color="#202020" highlightColor="#444">
+                <Skeleton height={300} duration={2} />
+            </SkeletonTheme>
         </div>
         :
-        <Link to={`movie/${movie.id}`} style={{textDecoration: "none", color: "white"}}>
+        <Link to={`/movie/${movie.id}`} style={{textDecoration: "none", color: "white"}}>
+          <div className="cards">
             <img className="cards_img" src={`https://image.tmdb.org/t/p/original${movie?movie.poster_path:""}`} />
             <div className="cards_overlay">
               <div className="cards_title">{movie?movie.original_title:""}</div>
@@ -32,6 +33,7 @@ const Cards = ({movie}) => {
                 {movie?movie.relase_date:""}
                 <span className="card_rating">{movie?movie.vote_average:""}<i className="fas fa-start" /></span>
                 <div className="card_description">{movie ? movie.overview.slice(0,118)+"..." : ""}</div>
+              </div>
               </div>
             </div>
         </Link>
