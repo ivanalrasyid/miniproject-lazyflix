@@ -13,6 +13,7 @@ const Header = () => {
             <Link to="/movies/popular" style={{textDecoration: "none"}}><span>Popular</span></Link>
             {/* <Link to="/movies/top_rated" style={{textDecoration: "none"}}><span>Top Rated</span></Link> */}
             <Link to="/movies/upcoming" style={{textDecoration: "none"}}><span>Upcoming</span></Link>
+            <Link to="/about" style={{textDecoration: "none"}}><span>About Us</span></Link>
             <Link to="/contact" style={{textDecoration: "none"}}><span>Contact</span></Link>
 
           </div>
