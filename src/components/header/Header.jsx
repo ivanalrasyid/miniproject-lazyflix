@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="headerLeft">
-        <Link to="/"><img className="header_icon" src={logo} alt="Logo"/><h2 className="ms-2">Lazyflix</h2></Link>
+        <Link to="/"><img className="header_icon" src={logo} alt="Logo"/><h2 className="ms-2 mb-2 title">Lazyflix</h2></Link>
         {/* <Link><span>Hallo</span></Link> */}
           <div className="navbar-list">
             <Link to="/movies/popular" style={{textDecoration: "none"}}><span>Popular</span></Link>
