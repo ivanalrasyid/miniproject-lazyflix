@@ -55,7 +55,10 @@ const Cards = ({movie}) => {
                   <button
                     className="btn btn-watch-list"
                     disabled={watchlistDisabled}
-                    onClick={() => addMovieToWatchlist(movie)}
+                    onClick={(e) => {
+                      addMovieToWatchlist(movie);
+                      e.preventDefault();
+                    }}
                   >
                     Add to Watchlist
                   </button>
@@ -63,7 +66,10 @@ const Cards = ({movie}) => {
                   <button
                     className="btn btn-watched"
                     disabled={watchedDisabled}
-                    onClick={() => addMovieToWatched(movie)}
+                    onClick={(e) => {
+                      addMovieToWatched(movie);
+                      e.preventDefault();
+                    }}
                   >
                     Add to Watched
                   </button>
