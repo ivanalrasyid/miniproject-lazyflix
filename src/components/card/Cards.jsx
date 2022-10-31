@@ -4,6 +4,8 @@ import "./Cards.css"
 import { Link } from "react-router-dom"
 import { GlobalContext } from "../../context/GlobalState";
 
+
+
 const Cards = ({movie}) => {
   const [isLoading, setIsLoading] = useState(true)
 
@@ -31,6 +33,8 @@ const Cards = ({movie}) => {
 
   const watchedDisabled = storedMovieWatched ? true : false;
 
+
+
   return (
     <>
       {
@@ -49,7 +53,7 @@ const Cards = ({movie}) => {
               <div className="cards_title">{movie?movie.original_title:""}</div>
               <div className="cards_runtime">
                 {/* {movie?movie.relase_date:""} */}
-                {/* <span className="card_rating">{movie?movie.vote_average:""}<i className="fas fa-start" /></span> */}
+                <span className="card_rating">{movie?movie.vote_average:""}<i className="fas fa-star" /></span>
                 {/* <div className="card_description">{movie ? movie.overview.slice(0,118)+"..." : ""}</div> */}
                 <div className="controls">
                   <button
