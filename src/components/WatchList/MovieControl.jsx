@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export const MovieControls = ({ type, movie }) => {
   const {
     removeMovieFromWatchlist,
@@ -9,7 +12,19 @@ export const MovieControls = ({ type, movie }) => {
     removeFromWatched,
   } = useContext(GlobalContext);
 
+  const notify = () => toast.success('🦄 Success Remove', {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    });
+
   return (
+  <div>
     <div className="inner-card-controls">
       {type === "watchlist" && (
         <>
@@ -34,12 +49,27 @@ export const MovieControls = ({ type, movie }) => {
 
           <button
             className="ctrl-btn"
-            onClick={() => removeFromWatched(movie.id)}
+            onClick={() => {
+              removeFromWatched(movie.id);
+              notify();
+            }}
           >
             <i className="fa-fw fa fa-times"></i>
           </button>
         </>
       )}
     </div>
+    <ToastContainer position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+      />
+  </div>
   );
 };

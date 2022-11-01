@@ -4,6 +4,10 @@ import "./Cards.css"
 import { Link } from "react-router-dom"
 import { GlobalContext } from "../../context/GlobalState";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 
 const Cards = ({movie}) => {
@@ -33,6 +37,8 @@ const Cards = ({movie}) => {
 
   const watchedDisabled = storedMovieWatched ? true : false;
 
+  const notifyWatched = () => toast("Successfully watched");
+  const notifyWatchList = () => toast("Successfully Watch List");
 
 
   return (
@@ -57,22 +63,24 @@ const Cards = ({movie}) => {
                 {/* <div className="card_description">{movie ? movie.overview.slice(0,118)+"..." : ""}</div> */}
                 <div className="controls">
                   <button
-                    className="btn btn-watch-list"
+                    className="btn watchList"
                     disabled={watchlistDisabled}
                     onClick={(e) => {
                       addMovieToWatchlist(movie);
                       e.preventDefault();
+                      notifyWatchList();
                     }}
                   >
                     Add to Watchlist
                   </button>
 
                   <button
-                    className="btn btn-watched"
+                    className="btn watched"
                     disabled={watchedDisabled}
                     onClick={(e) => {
                       addMovieToWatched(movie);
                       e.preventDefault();
+                      notifyWatched();
                     }}
                   >
                     Add to Watched
@@ -81,6 +89,7 @@ const Cards = ({movie}) => {
               </div>
               </div>
             </div>
+            <ToastContainer />
         </Link>
       }
     </>

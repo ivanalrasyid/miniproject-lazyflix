@@ -5,6 +5,7 @@ import { MovieCard } from "./MovieCard";
 export const Watched = () => {
   const { watched } = useContext(GlobalContext);
 
+
   return (
     <div className="movie-page mt-5">
       <div className="container">
