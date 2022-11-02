@@ -5,7 +5,6 @@ import Home from './pages/home/Home';
 import MovieList from './components/movieList/MovieList';
 import Movie from './pages/home/MovieDetail/Movie';
 import Contact from './components/Contact/Contact';
-import AboutUs from './components/About/AboutUs';
 import { Watchlist } from "./components/WatchList/WatchList";
 import { Watched } from "./components/WatchList/Watched";
 
@@ -22,7 +21,6 @@ function App() {
             <Route path="/movie/:id" element={<Movie />}></Route>
             <Route path="/movies/:type" element={<MovieList />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
-            <Route path="/about" element={<AboutUs />}></Route>
             <Route path="/watchlist" element={<Watchlist />}></Route>
             <Route path="/watched" element={<Watched />}></Route>
             <Route path="/*" element={<h1>Error Page</h1>}></Route>

@@ -4,7 +4,7 @@ import "./Cards.css"
 import { Link } from "react-router-dom"
 import { GlobalContext } from "../../context/GlobalState";
 
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -58,9 +58,7 @@ const Cards = ({movie}) => {
             <div className="cards_overlay">
               <div className="cards_title">{movie?movie.original_title:""}</div>
               <div className="cards_runtime">
-                {/* {movie?movie.relase_date:""} */}
-                <span className="card_rating">{movie?movie.vote_average:""}<i className="fas fa-star" /></span>
-                {/* <div className="card_description">{movie ? movie.overview.slice(0,118)+"..." : ""}</div> */}
+              <i className="fas fa-star me-2" /><span className="card_rating">{movie?movie.vote_average:""}</span>
                 <div className="controls">
                   <button
                     className="btn watchList"
@@ -89,7 +87,6 @@ const Cards = ({movie}) => {
               </div>
               </div>
             </div>
-            <ToastContainer />
         </Link>
       }
     </>

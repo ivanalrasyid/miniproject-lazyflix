@@ -5,6 +5,7 @@ import { Carousel } from 'react-responsive-carousel'
 import { Link } from "react-router-dom"
 import MovieList from '../../components/movieList/MovieList'
 import Footer from "../../components/Footer/Footer"
+import { ToastContainer } from 'react-toastify';
 
 const Home = () => {
 
@@ -49,6 +50,7 @@ const Home = () => {
         </Carousel>
         <MovieList />
         <Footer />
+        <ToastContainer />
       </div>
     </>
   )

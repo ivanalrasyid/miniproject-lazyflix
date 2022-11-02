@@ -13,3 +13,7 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.list_cards .cards {
+    flex-basis: 16.6%;
+  }
