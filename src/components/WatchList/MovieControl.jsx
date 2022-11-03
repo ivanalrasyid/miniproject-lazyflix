@@ -12,7 +12,7 @@ export const MovieControls = ({ type, movie }) => {
     removeFromWatched,
   } = useContext(GlobalContext);
 
-  const notify = () => toast.success('🦄 Success Remove', {
+  const notifyWatchList = () => toast.success('🦄 Success Remove', {
     position: "top-center",
     autoClose: 5000,
     hideProgressBar: false,
@@ -22,6 +22,17 @@ export const MovieControls = ({ type, movie }) => {
     progress: undefined,
     theme: "light",
     });
+
+    const notify = () => toast.success('🦄 Success Remove', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
 
   return (
   <div>
@@ -34,7 +45,10 @@ export const MovieControls = ({ type, movie }) => {
 
           <button
             className="ctrl-btn"
-            onClick={() => removeMovieFromWatchlist(movie.id)}
+            onClick={() => {
+              removeMovieFromWatchlist(movie.id);
+              notifyWatchList();
+            }}
           >
             <i className="fa-fw fa fa-times"></i>
           </button>
