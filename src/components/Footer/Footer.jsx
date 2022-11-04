@@ -2,11 +2,8 @@ import React from 'react';
 import {
   MDBFooter,
   MDBContainer,
-  MDBCol,
-  MDBRow,
   MDBIcon,
-  MDBBtn,
-  MDBtn
+  MDBBtn
 } from 'mdb-react-ui-kit';
 
 export default function App() {
