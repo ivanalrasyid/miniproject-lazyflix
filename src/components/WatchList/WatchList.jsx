@@ -29,3 +29,5 @@ export const Watchlist = () => {
     </div>
   );
 };
+
+// DONE

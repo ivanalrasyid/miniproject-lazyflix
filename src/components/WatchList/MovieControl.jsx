@@ -87,3 +87,5 @@ export const MovieControls = ({ type, movie }) => {
   </div>
   );
 };
+
+// DONE

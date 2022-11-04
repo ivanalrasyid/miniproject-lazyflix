@@ -94,3 +94,5 @@ const Cards = ({movie}) => {
 }
 
 export default Cards;
+
+// DONE

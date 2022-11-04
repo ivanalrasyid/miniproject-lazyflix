@@ -15,3 +15,5 @@ export const MovieCard = ({ movie, type }) => {
     </div>
   );
 };
+
+// DONE
