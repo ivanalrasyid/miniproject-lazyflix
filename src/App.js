@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from './components/header/Header';
 import Home from './pages/home/Home';
 import MovieList from './components/movieList/MovieList';
+import NotFound from "./components/NotFound/NotFound"
 import Movie from './pages/home/MovieDetail/Movie';
 import Contact from './components/Contact/Contact';
 import { Watchlist } from "./components/WatchList/WatchList";
@@ -23,7 +24,7 @@ function App() {
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/watchlist" element={<Watchlist />}></Route>
             <Route path="/watched" element={<Watched />}></Route>
-            <Route path="/*" element={<h1>Error Page</h1>}></Route>
+            <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </Router>
       </div>
