@@ -1,5 +1,5 @@
 ## Mini Project Kampus Merdeka
 
-* On Going!
+* Final!
 
 > Just Do It
